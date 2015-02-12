@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>slider demo</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<style>#slider { margin: 10px; }	</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="jquery-ui.js"></script>
+</head>
+<body>
+<div id="slider"></div>
+<script>
+	$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 50  ]
+});
+
+$( "#slider" ).slider( {values: [ 40, 80  ] });
+$( "#slider" ).slider( "option", "animate", "slow" );
+
+$( "#slider" ).on( "slide", function( event, ui ) 
+{
+	console.log(ui.values);
+} );
+	//var value = $( ".selector" ).slider( "values", 0 );
+	//console.log(value);
+
+</script>
+</body>
+</html>
